@@ -1,626 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuvaraj Raju Akkole | AI & DS Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuvaraj Akkole — AI Engineer, RAG & Agentic Systems</title>
+<meta name="description" content="Yuvaraj Akkole — AI Engineer building retrieval, multi-agent orchestration, and GraphRAG systems. Final-year B.E. AI & Data Science, RNSIT Bengaluru.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <input type="checkbox" id="theme-switch">
-        <label for="theme-switch" class="switch">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
-        </label>
-    </div>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Back to Top">
-        <i class="fas fa-arrow-up"></i>
+<div class="grain" aria-hidden="true"></div>
+<div class="gradient-blur" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">YA<span class="nav-mark-dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about"><span class="nav-num">01</span>About</a>
+      <a href="#work"><span class="nav-num">02</span>Work</a>
+      <a href="#experience"><span class="nav-num">03</span>Experience</a>
+      <a href="#skills"><span class="nav-num">04</span>Skills</a>
+      <a href="#contact"><span class="nav-num">05</span>Contact</a>
+    </nav>
+    <a class="nav-cta" href="assets/resume.pdf" download>
+      <span>Résumé</span>
+      <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1V8.5M5.5 8.5L2 5M5.5 8.5L9 5M1 10H10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
     </button>
+  </div>
+</header>
 
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h2>Mr.Yuvaraj</h2>
-            </div>
-            <nav>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+  <a href="assets/resume.pdf" download class="mobile-resume">Download Résumé</a>
+</div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight" >Yuvaraj Akkole</span></h1>
-                <div class="typing-container">
-                    <span id="typing-text"></span><span class="cursor">|</span>
-                </div>
-                <p class="tagline">Building intelligent and interactive systems with code</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn primary">View Projects</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
-                </div>
-                <div class="social-icons">
-                    <a href="https://github.com/yuvarajakkole" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/yuvaraj-akkole-82118a249/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://leetcode.com/u/yuvarajakkole/" target="_blank"><i class="cib-leetcode"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-shape"></div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-container">
-                        <img src="img/yuvaraj.jpg" alt="Yuvaraj Raju Akkole">
-                    </div>
-                </div>
-                <div class="about-text">
-                    <div class="glass-card">
-                        <h3>Who am I?</h3>
-                        <p>I'm a B.E. student specializing in Artificial Intelligence and Data Science with a passion for developing intelligent systems that solve real-world problems.</p>
-                        <p>My journey in technology began with a curiosity about how systems work and evolved into a deep interest in AI, machine learning, and data-driven solutions. I'm particularly fascinated by the intersection of AI with everyday applications.</p>
-                        <p>When I'm not coding or analyzing data, I enjoy exploring new technologies, contributing to open-source projects, and continuously expanding my knowledge in the rapidly evolving field of AI.</p>
-                        <div class="about-details">
-                            <div class="detail">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>B.E. in AI & Data Science</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>India</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-code"></i>
-                                <span>AI & DS Enthusiast</span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-laptop-code"></i>
-                                <span>Developer, Data Scientist and Analysis</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Skills</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Python</h4>
-                                <div class="skill-percent">90%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>C</h4>
-                                <div class="skill-percent">60%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="60"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>R</h4>
-                                <div class="skill-percent">70%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>SQL</h4>
-                                <div class="skill-percent">80%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="80"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>HTML</h4>
-                                <div class="skill-percent">95%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>CSS</h4>
-                                <div class="skill-percent">80%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>JavaScript</h4>
-                                <div class="skill-percent">50%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="50"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>AI & Data Science</h3>
-                    <div class="skills-grid">
-                        
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Data Analysis and Data Scientist</h4>
-                                <div class="skill-percent">90%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Machine Learning</h4>
-                                <div class="skill-percent">85%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Deep Learning and NLP</h4>
-                                <div class="skill-percent">75%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>RAG and LLM's</h4>
-                                <div class="skill-percent">70%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h4>Agentic AI</h4>
-                                <div class="skill-percent">65%</div>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-percent="90"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Projects</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="img/vooicegest.jpg" alt="VoiceGest">
-                    </div>
-                    <div class="project-content">
-                        <h3>VoiceGest</h3>
-                        <p>A system controller that combines voice commands and gesture recognition for intuitive device control.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Computer Vision</span>
-                            <span>Speech Processing</span>
-                            <span>NLP,Machine learning, DL</span>
-                        </div>
-                        <div class="project-links">
-                            <!-- <a href="#" target="_blank" class="btn small">Live Demo</a> -->
-                            <a href="https://github.com/yuvarajakkole/VoiceGest.git" target="_blank" class="btn small secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="img/chatbot.webp" alt="College Info Chatbot">
-                    </div>
-                    <div class="project-content">
-                        <h3>College Info Chatbot</h3>
-                        <p>An AI-powered chatbot that provides information about college courses, admissions, and facilities.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>Flask</span>
-                            <span>HTML, CSS, JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <!-- <a href="#" target="_blank" class="btn small">Live Demo</a> -->
-                            <a href="https://github.com/yuvarajakkole/collegechatbot.git" target="_blank" class="btn small secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                <div class="project-img">
-                    <img src="img/mcp.webp" alt="MCP Server Leave Management">
-                </div>
-                    <div class="project-content">
-                        <h3>MCP Server for AI-based Leave Management System</h3>
-                        <p>An intelligent MCP-based automation system that handles employee leave requests, approvals, and HR notifications using AI and real-time server communication using Claude AI.</p>
-                        <div class="tech-stack">
-                            <span>Python, Flask , UV</span>
-                            <span>MCP Server with Claude AI</span>
-                            <span>AI Automation</span>
-                            <span>Database</span>
-                        </div>
-                        <div class="project-links">
-                            <!-- <a href="#" target="_blank" class="btn small">Live Demo</a> -->
-                            <a href="https://github.com/yuvarajakkole/leave_manage_mcp_server.git" target="_blank" class="btn small secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="img/travel.avif" alt="Travel Booking Website">
-                    </div>
-                    <div class="project-content">
-                        <h3>Travel Booking Website</h3>
-                        <p>A comprehensive travel booking platform with flight, hotel, and activity reservations.</p>
-                        <div class="tech-stack">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>PHP</span>
-                        </div>
-                        <div class="project-links">
-                            <!-- <a href="#" target="_blank" class="btn small">Live Demo</a> -->
-                            <a href="https://github.com/yuvarajakkole/tour_booking.git" target="_blank" class="btn small secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="img/stock.webp" alt="Stock Price Prediction">
-                    </div>
-                    <div class="project-content">
-                        <h3>Stock Price Prediction</h3>
-                        <p>A machine learning model that predicts stock prices based on historical data and market trends.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>TensorFlow</span>
-                            <span>Pandas</span>
-                            <span>Matplotlib</span>
-                        </div>
-                        <div class="project-links">
-                            <!-- <a href="#" target="_blank" class="btn small">Live Demo</a> -->
-                            <a href="https://github.com/yuvarajakkole/stock_price_predict.git" target="_blank" class="btn small secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="img/amazon.png" alt="E-commerce Website">
-                    </div>
-                    <div class="project-content">
-                        <h3>Amazon-like E-commerce Website only UI/UX</h3>
-                        <p>A e-commerce platform with product listings, login/ sign-in.</p>
-                        <div class="tech-stack">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <!-- <span>JavaScript</span> -->
-                            <!-- <span>Node.js</span> -->
-                        </div>
-                        <div class="project-links">
-                            <a href="https://yuvarajakkole.github.io/amazone-clone/" target="_blank" class="btn small">Live Demo</a>
-                            <a href="https://github.com/yuvarajakkole/amazone-clone.git" target="_blank" class="btn small secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="img/assistant.avif" alt="Voice Assistant">
-                    </div>
-                    <div class="project-content">
-                        <h3>Voice Assistant</h3>
-                        <p>A custom voice assistant that can perform tasks like setting reminders, answering questions, and controlling smart devices.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Speech Recognition</span>
-                            <span>NLP</span>
-                            <span>APIs</span>
-                        </div>
-                        <div class="project-links">
-                            <!-- <a href="#" target="_blank" class="btn small">Live Demo</a> -->
-                            <a href="https://github.com/yuvarajakkole/VoiceGest.git" target="_blank" class="btn small secondary">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <!-- <section id="resume" class="resume">
-        <div class="container">
-            <div class="section-header">
-                <h2>Resume</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="resume-content">
-                <div class="resume-text">
-                    <p>View my full resume to learn more about my education, experience, and qualifications.</p>
-                </div>
-                <div class="resume-download">
-                    <a href="#" class="btn primary" download>
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-<section id="resume" class="resume">
-    <div class="container">
-        <div class="section-header">
-            <h2>Resume</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="resume-content">
-            <div class="resume-text">
-                <p>View my full resume to learn more about my education, experience, and qualifications.</p>
-            </div>
-
-            <!-- Embedded Resume PDF Preview -->
-            <div class="resume-preview">
-                <iframe src="yuvarajakkole.pdf" width="100%" height="600px" frameborder="0"></iframe>
-            </div>
-
-            <!-- Download Button -->
-            <div class="resume-download">
-                <a href="assets/resume.pdf" class="btn primary" download>
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-            </div>
-        </div>
+<!-- HERO / PERSONAL INTRO -->
+<section class="hero-intro" id="top">
+  <div class="hero-inner">
+    <div class="hero-photo-container reveal">
+      <div class="photo-frame">
+        <img src="yuvaraj.png" alt="Yuvaraj Akkole" class="hero-photo">
+      </div>
+      <div class="photo-accent" aria-hidden="true"></div>
     </div>
+    <div class="hero-content reveal">
+      <div class="intro-badge">
+        <span class="badge-dot"></span>
+        <span>Available for opportunities</span>
+      </div>
+      <h1 class="intro-title">
+        <span class="name-span">Yuvaraj Akkole</span>
+      </h1>
+      <p class="intro-role">AI Engineer — RAG · Agentic Systems · LLM Infrastructure</p>
+      <p class="intro-bio">
+        Building production-grade AI systems that work. Final-year B.E. AI & Data Science (RNSIT, 2026) with 7 shipped systems, obsessed with performance optimization and clean architecture.
+      </p>
+      <div class="intro-stats">
+        <div class="stat-item">
+          <span class="stat-value">8.6/10</span>
+          <span class="stat-name">CGPA</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">7</span>
+          <span class="stat-name">Systems shipped</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">62%</span>
+          <span class="stat-name">Latency cut</span>
+        </div>
+      </div>
+      <div class="intro-actions">
+        <a href="#work" class="btn btn-primary">
+          <span>View my work</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7H11M11 7L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="mailto:yuvarajakkole@gmail.com" class="btn btn-secondary">
+          <span>Get in touch</span>
+        </a>
+      </div>
+      <div class="intro-social">
+        <a href="https://github.com/yuvarajakkole" target="_blank" rel="noopener">GitHub</a>
+        <span class="divider">—</span>
+        <a href="https://www.linkedin.com/in/yuvarajakkole/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="divider">—</span>
+        <a href="tel:+916362426223">+91 636 242 6223</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-    <!-- Achievements Section -->
-<section id="achievements" class="achievements">
-    <div class="container">
-        <div class="section-header">
-            <h2>Achievements & Certificates</h2>
-            <div class="underline"></div>
+<!-- ABOUT / EDUCATION -->
+<section class="section about-section" id="about">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <div class="card-icon">🎓</div>
+        <h3>Education</h3>
+        <p class="edu-degree">B.E. — AI & Data Science</p>
+        <p class="edu-school">RNSIT Engineering College, Bengaluru</p>
+        <p class="edu-year">2023 – 2026</p>
+        <div class="edu-badges">
+          <span class="badge-pill">CGPA 8.6/10</span>
+          <span class="badge-pill gold">Gold Medal</span>
+          <span class="badge-pill">VTU Topper</span>
         </div>
-        <div class="timeline">
+      </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>GenAI Powered Data Analytics Job Simulation</h3>
-                    <span class="date">July 13, 2025</span>
-                    <p>Completed a hands-on job simulation on data analytics powered by Generative AI from Forage.</p>
-                    <a href="cirtificats/tata cirtificat.pdf" target="_blank" class="btn small secondary">View Certificate</a>
-                </div>
-            </div>
+      <div class="about-card reveal">
+        <div class="card-icon">💡</div>
+        <h3>Philosophy</h3>
+        <p>I believe in building systems that are <strong>measurable, repeatable, and ship-ready</strong>. Performance isn't an afterthought—it's architected from day one.</p>
+        <p>Every line of code should earn its place through rigorous testing and benchmarking.</p>
+      </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>SQL (Advanced)</h3>
-                    <span class="date">June 15, 2025</span>
-                    <p>Earned advanced certification in SQL from HackerRank demonstrating complex query skills.</p>
-                    <a href="cirtificats/sql certificate.pdf" target="_blank" class="btn small secondary">View Certificate</a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Project Management Essentials</h3>
-                    <span class="date">April 21, 2025</span>
-                    <p>Completed the essentials of Project Management course on Coursera.</p>
-                    <a href="cirtificats/PM(yuva).pdf" target="_blank" class="btn small secondary">View Certificate</a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Data Science with Python</h3>
-                    <span class="date">March 25, 2025</span>
-                    <p>Completed the Data Science with Python course on Infosys Springboard platform.</p>
-                    <a href="cirtificats/ds in python.pdf" target="_blank" class="btn small secondary">View Certificate</a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Data Science for Engineers</h3>
-                    <span class="date">Jan – Mar 2025</span>
-                    <p>Completed NPTEL’s certification course on Data Science for Engineers.</p>
-                    <a href="cirtificats/Data Science for Engineers.pdf" target="_blank" class="btn small secondary">View Certificate</a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Azure Data Fundamentals</h3>
-                    <span class="date">December 13, 2024</span>
-                    <p>Earned Microsoft Certified Azure Data Fundamentals credential.</p>
-                    <a href="cirtificats/azure (yuva).pdf" target="_blank" class="btn small secondary">View Certificate</a>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Computer Network & Internet Security</h3>
-                    <span class="date">September 27, 2024</span>
-                    <p>Completed Infosys Springboard course on networking and cybersecurity fundamentals.</p>
-                    <a href="cirtificats/cn.pdf" target="_blank" class="btn small secondary">View Certificate</a>
-                </div>
-            </div>
-
-        </div>
+      <div class="about-card reveal">
+        <div class="card-icon">🚀</div>
+        <h3>Currently</h3>
+        <p>Wrapping up final-year coursework at RNSIT while shipping production AI systems. Just finished an AI Engineer internship under the AICTE Bharat Unnati Fellowship.</p>
+        <p>Open to: <strong>AI Engineer</strong> • <strong>ML Engineer</strong> • <strong>LLM Infrastructure</strong></p>
+      </div>
     </div>
+  </div>
 </section>
 
+<!-- WORK / PROJECTS -->
+<section class="section work-section" id="work">
+  <div class="section-inner">
+    <div class="section-label">Selected Work</div>
+    <p class="section-desc reveal">Seven production systems, each architected and benchmarked end-to-end.</p>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>yuvarajakkole@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>India</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p>+91 6362426223</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/yuvarajakkole" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/yuvaraj-akkole-82118a249/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://leetcode.com/u/yuvarajakkole/" target="_blank"><i class="bxl bx-leetcode" ></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form action="https://formsubmit.co/yuvarajakkole@gmail.com" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                        </div>
-
-        <!-- Optional hidden fields -->           
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="box">
-                <input type="hidden" name="_autoresponse" value="Thank you for contacting me! I’ll get back to you soon.">
-
-                    <button type="submit" class="btn primary">Send Message</button>
-                    </form>
-                </div>
-
-            </div>
+    <div class="work-showcase">
+      <article class="work-featured reveal">
+        <div class="work-badge">Featured</div>
+        <h3>DocuMind</h3>
+        <p class="work-subtitle">Multi-agent document intelligence</p>
+        <p class="work-description">
+          A LangGraph state machine coordinating three specialized agents—Extractor, Analyst, Verifier—where the Verifier cross-checks every answer against source chunks before reaching the user.
+        </p>
+        <div class="work-metrics">
+          <div><strong>−38%</strong> hallucinations</div>
+          <div><strong>&lt;400ms</strong> retrieval</div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2023 Yuvaraj Raju Akkole. All Rights Reserved.</p>
-            </div>
+        <div class="work-tags">
+          <span>Python</span><span>LangGraph</span><span>FastAPI</span><span>ChromaDB</span>
         </div>
-    </footer>
+        <a href="https://github.com/yuvarajakkole/DocuMind" target="_blank" class="work-link">View on GitHub →</a>
+      </article>
 
-    <script src="script.js"></script>
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <h3>SearchIQ</h3>
+          <p class="work-role">Two-stage semantic search</p>
+          <p class="work-desc">FAISS + LLM reranking for production-grade search infrastructure.</p>
+          <div class="work-meta">
+            <strong>+19%</strong> relevance
+          </div>
+          <a href="https://github.com/yuvarajakkole/SearchIQ" target="_blank" class="work-link-small">View →</a>
+        </article>
+
+        <article class="work-card reveal">
+          <h3>SmartTrip</h3>
+          <p class="work-role">Travel planning assistant</p>
+          <p class="work-desc">RAG-powered itinerary management with multi-turn context handling.</p>
+          <div class="work-meta">
+            <strong>+18%</strong> accuracy
+          </div>
+          <a href="https://github.com/yuvarajakkole/smartTrip" target="_blank" class="work-link-small">View →</a>
+        </article>
+
+        <article class="work-card reveal">
+          <h3>Decision Intelligence</h3>
+          <p class="work-role">Supervisor-orchestrated agents</p>
+          <p class="work-desc">Market, Financial, Knowledge & Strategy agents with typed state exchange.</p>
+          <div class="work-meta">
+            <strong>4</strong> specialized agents
+          </div>
+          <a href="https://github.com/yuvarajakkole/multi_agent_decision_ai" target="_blank" class="work-link-small">View →</a>
+        </article>
+
+        <article class="work-card reveal">
+          <h3>ReAct Code Agent</h3>
+          <p class="work-role">Autonomous code generation</p>
+          <p class="work-desc">Explicit loop: Thought → Action → Observation → Evaluate → Refine.</p>
+          <div class="work-meta">
+            <strong>Sandboxed</strong> execution
+          </div>
+          <a href="https://github.com/yuvarajakkole/Autonomous-Code-Generation-Agent-ReAct-" target="_blank" class="work-link-small">View →</a>
+        </article>
+
+        <article class="work-card reveal">
+          <h3>Email Triage RL</h3>
+          <p class="work-role">RL environment</p>
+          <p class="work-desc">Competition-grade OpenEnv on Enron corpus with adversarial difficulty.</p>
+          <div class="work-meta">
+            <strong>Persistent</strong> state
+          </div>
+          <a href="https://github.com/yuvarajakkole/email-env" target="_blank" class="work-link-small">View →</a>
+        </article>
+
+        <article class="work-card reveal">
+          <h3>Leave Manager MCP</h3>
+          <p class="work-role">Claude Desktop integration</p>
+          <p class="work-desc">Model Context Protocol server for Claude with leave management capabilities.</p>
+          <div class="work-meta">
+            <strong>MCP</strong> protocol
+          </div>
+          <a href="https://github.com/yuvarajakkole" target="_blank" class="work-link-small">View →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section experience-section" id="experience">
+  <div class="section-inner">
+    <div class="section-label">Experience</div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>AI Engineer Intern</h3>
+            <span class="timeline-date">Jan — May 2026</span>
+          </div>
+          <p class="timeline-org">LearnersByte · AICTE Bharat Unnati AI Fellowship</p>
+          <ul class="timeline-list">
+            <li>Engineering point of contact for a 5-engineer team across 4 months—owned sprint cycles, code review standards, and cross-functional reporting.</li>
+            <li>Designed RAG pipeline evaluating 6 chunking strategies and 3 embedding models, cutting latency from 800ms to &lt;300ms with 22% precision gain.</li>
+            <li>Built transformer-based intent classifier across 42 classes reaching 85% accuracy with 90%+ test coverage.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>GenAI Data Science Analyst</h3>
+            <span class="timeline-date">Oct — Dec 2025</span>
+          </div>
+          <p class="timeline-org">BCG X · Forage Virtual Internship</p>
+          <ul class="timeline-list">
+            <li>Analyzed 3 financial datasets covering 5,000+ records; identified key risk indicators across 8 visualizations.</li>
+            <li>Scoped open-ended business problem into structured AI solution; prototyped Q&A chatbot with 3 prioritized recommendations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section skills-section" id="skills">
+  <div class="section-inner">
+    <div class="section-label">Skills & Stack</div>
+    <div class="skills-showcase">
+      <div class="skill-block reveal">
+        <h4>Generative AI & Agents</h4>
+        <div class="skill-tags">
+          <span>LangChain</span><span>LangGraph</span><span>RAG Pipelines</span><span>GraphRAG</span><span>Multi-Agent Orchestration</span><span>MCP</span><span>Prompt Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>ML & Data Science</h4>
+        <div class="skill-tags">
+          <span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Sentence Transformers</span><span>Feature Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Backend & Infrastructure</h4>
+        <div class="skill-tags">
+          <span>FastAPI</span><span>Flask</span><span>Docker</span><span>REST APIs</span><span>WebSockets</span><span>Redis</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Databases & Storage</h4>
+        <div class="skill-tags">
+          <span>PostgreSQL</span><span>MongoDB</span><span>Neo4j</span><span>FAISS</span><span>ChromaDB</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Cloud & DevOps</h4>
+        <div class="skill-tags">
+          <span>Azure</span><span>AWS EC2</span><span>GitHub Actions</span><span>CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <h4>Languages</h4>
+        <div class="skill-tags">
+          <span>Python</span><span>SQL</span><span>C</span><span>R</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH / PUBLICATIONS -->
+<section class="section research-section">
+  <div class="section-inner">
+    <div class="section-label">Research</div>
+    <article class="research-card reveal">
+      <div class="research-header">
+        <h3>Architectural Strategies for LLM Token Optimization</h3>
+        <span class="research-date">June 2026</span>
+      </div>
+      <p class="research-subtitle">Maximizing output quality while minimizing computational cost</p>
+      <p class="research-desc">
+        A systematic taxonomy of cost-reduction techniques spanning prompt design, intelligent caching, model routing, context engineering, and fine-tuning—synthesizing production pricing benchmarks across Anthropic, OpenAI, Google, and DeepSeek.
+      </p>
+      <div class="research-highlights">
+        <div><strong>98%</strong> max cost reduction</div>
+        <div><strong>85–95%</strong> compounded savings</div>
+        <div><strong>5</strong> optimization layers</div>
+      </div>
+      <a href="assets/research_paper.pdf" target="_blank" class="btn btn-primary">Read the paper</a>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<section class="section footer-section" id="contact">
+  <div class="section-inner">
+    <div class="footer-content">
+      <h2>Let's build something<br>that earns its tokens.</h2>
+      <p>Open to collaborations, discussions on AI systems, and opportunities in AI/ML engineering.</p>
+      <div class="contact-methods">
+        <a href="mailto:yuvarajakkole@gmail.com" class="contact-card">
+          <span class="contact-icon">✉</span>
+          <span class="contact-text">yuvarajakkole@gmail.com</span>
+        </a>
+        <a href="https://github.com/yuvarajakkole" target="_blank" class="contact-card">
+          <span class="contact-icon">⚙</span>
+          <span class="contact-text">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/yuvarajakkole/" target="_blank" class="contact-card">
+          <span class="contact-icon">💼</span>
+          <span class="contact-text">LinkedIn</span>
+        </a>
+        <a href="tel:+916362426223" class="contact-card">
+          <span class="contact-icon">📱</span>
+          <span class="contact-text">+91 636 242 6223</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <p>Bengaluru, Karnataka, India</p>
+    <p>© 2026 Yuvaraj Akkole</p>
+  </div>
+</section>
+
+<script src="main.js"></script>
 </body>
 </html>
